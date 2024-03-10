@@ -19,14 +19,8 @@ public partial class BoardController : Node2D
 
 		CreateGameBoard();
 
-		for (int i = 0; i < gameBoard.Length; i++)
-		{
-			PopulateGameBoardWithInitialValues(i);
-			
-		}
-
-		FillBoardWithAssignedNumbers();
-		PrintGameBoard();
+		AssignNewInitialNumbers();
+		// PrintGameBoard(); Debugging purposes only
 
 	}
 
@@ -174,7 +168,7 @@ public partial class BoardController : Node2D
 			GD.Print(rowNumbers);
 		}
 	}
-	public void RestartSudoku()
+	public void ClearGameboard()
 	{	
 		gameNumbers = new int[boardSize*boardSize, boardSize*boardSize];
 		for (int i = 0; i < gameBoard.Length; i++)
@@ -189,12 +183,18 @@ public partial class BoardController : Node2D
 				y += i % 3 * 3;
 
 				SudokuCell cell= gameBoard[i].GetCellByIndex(j);				
-				cell.Clear();
-				cell.AppendText($"[center][color=blue]{gameNumbers[x,y]}[/color][/center]");
-				cell.hasDefaultValue = true;				
-				
+				cell.Clear();				
+				cell.hasDefaultValue = false;				
 			}
 		}
+	}
+	public void AssignNewInitialNumbers()
+	{
+		for (int i = 0; i < gameBoard.Length; i++)
+		{
+			PopulateGameBoardWithInitialValues(i);			
+		}
+		FillBoardWithAssignedNumbers();
 	}
 }
 

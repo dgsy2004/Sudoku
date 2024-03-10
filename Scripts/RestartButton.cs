@@ -14,6 +14,7 @@ public partial class RestartButton : Button
 	private void ButtonPressed()
 	{
        
-		boardController.RestartSudoku();
+		boardController.ClearGameboard();
+		boardController.AssignNewInitialNumbers();
 	}
 }
