@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=3 uid="uid://lvqynngfr7tt"]
+
+[ext_resource type="Texture2D" uid="uid://dt2h61vg7fdlk" path="res://Sprites/BoardChunk.png" id="1_d0mph"]
+[ext_resource type="Script" path="res://Scripts/ThreeByThree.cs" id="2_pqpja"]
+[ext_resource type="Script" path="res://SudokuCell.cs" id="3_n7hym"]
+
+[node name="ThreeByThree" type="Sprite2D" node_paths=PackedStringArray("cells")]
+position = Vector2(-1, 0)
+texture = ExtResource("1_d0mph")
+script = ExtResource("2_pqpja")
+cells = [NodePath("Cell1"), NodePath("Cell2"), NodePath("Cell3"), NodePath("Cell4"), NodePath("Cell5"), NodePath("Cell6"), NodePath("Cell7"), NodePath("Cell8"), NodePath("Cell9")]
+
+[node name="Cell1" type="RichTextLabel" parent="."]
+offset_left = -44.0
+offset_top = -44.0
+offset_right = -17.0
+offset_bottom = -18.0
+bbcode_enabled = true
+text = "1"
+script = ExtResource("3_n7hym")
+
+[node name="Cell2" type="RichTextLabel" parent="."]
+offset_left = -15.0
+offset_top = -45.0
+offset_right = 15.0
+offset_bottom = -18.0
+bbcode_enabled = true
+text = "1"
+script = ExtResource("3_n7hym")
+
+[node name="Cell3" type="RichTextLabel" parent="."]
+offset_left = 16.0
+offset_top = -45.0
+offset_right = 44.0
+offset_bottom = -17.0
+bbcode_enabled = true
+text = "1"
+script = ExtResource("3_n7hym")
+
+[node name="Cell4" type="RichTextLabel" parent="."]
+offset_left = -45.0
+offset_top = -16.0
+offset_right = -17.0
+offset_bottom = 14.0
+bbcode_enabled = true
+text = "1"
+script = ExtResource("3_n7hym")
+
+[node name="Cell5" type="RichTextLabel" parent="."]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 15.0
+offset_bottom = 14.0
+bbcode_enabled = true
+text = "1"
+script = ExtResource("3_n7hym")
+
+[node name="Cell6" type="RichTextLabel" parent="."]
+offset_left = 16.0
+offset_top = -16.0
+offset_right = 45.0
+offset_bottom = 14.0
+bbcode_enabled = true
+text = "1"
+script = ExtResource("3_n7hym")
+
+[node name="Cell7" type="RichTextLabel" parent="."]
+offset_left = -45.0
+offset_top = 15.0
+offset_right = -17.0
+offset_bottom = 45.0
+bbcode_enabled = true
+text = "1"
+script = ExtResource("3_n7hym")
+
+[node name="Cell8" type="RichTextLabel" parent="."]
+offset_left = -16.0
+offset_top = 16.0
+offset_right = 15.0
+offset_bottom = 45.0
+bbcode_enabled = true
+text = "1"
+script = ExtResource("3_n7hym")
+
+[node name="Cell9" type="RichTextLabel" parent="."]
+offset_left = 16.0
+offset_top = 17.0
+offset_right = 46.0
+offset_bottom = 46.0
+bbcode_enabled = true
+text = "1"
+script = ExtResource("3_n7hym")

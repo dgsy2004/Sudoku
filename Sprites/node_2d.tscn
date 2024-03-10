@@ -1,0 +1,158 @@
+[gd_scene load_steps=5 format=3 uid="uid://cb0r32nx551t8"]
+
+[ext_resource type="Script" path="res://Scripts/BoardController.cs" id="1_aax8f"]
+[ext_resource type="PackedScene" uid="uid://lvqynngfr7tt" path="res://ThreeByThree.tscn" id="2_2kqrp"]
+[ext_resource type="Script" path="res://Scripts/RestartButton.cs" id="3_3jcud"]
+[ext_resource type="Script" path="res://Scripts/SudokuButton.cs" id="3_dsq8y"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BoardController" type="Node2D" parent="."]
+position = Vector2(1, 1)
+script = ExtResource("1_aax8f")
+threeByThreeScene = ExtResource("2_2kqrp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -40.0
+offset_right = 41.0
+grow_vertical = 0
+text = "1"
+script = ExtResource("3_dsq8y")
+buttonNumber = 1
+boardController = NodePath("../../BoardController")
+
+[node name="Button2" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 41.0
+offset_top = -40.0
+offset_right = 81.0
+grow_vertical = 0
+text = "2"
+script = ExtResource("3_dsq8y")
+buttonNumber = 2
+boardController = NodePath("../../BoardController")
+
+[node name="Button3" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 81.0
+offset_top = -40.0
+offset_right = 121.0
+grow_vertical = 0
+text = "3"
+script = ExtResource("3_dsq8y")
+buttonNumber = 3
+boardController = NodePath("../../BoardController")
+
+[node name="Button4" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 121.0
+offset_top = -40.0
+offset_right = 161.0
+grow_vertical = 0
+text = "4"
+script = ExtResource("3_dsq8y")
+buttonNumber = 4
+boardController = NodePath("../../BoardController")
+
+[node name="Button5" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 161.0
+offset_top = -40.0
+offset_right = 201.0
+grow_vertical = 0
+text = "5"
+script = ExtResource("3_dsq8y")
+buttonNumber = 5
+boardController = NodePath("../../BoardController")
+
+[node name="Button6" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 201.0
+offset_top = -40.0
+offset_right = 241.0
+grow_vertical = 0
+text = "6"
+script = ExtResource("3_dsq8y")
+buttonNumber = 6
+boardController = NodePath("../../BoardController")
+
+[node name="Button7" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 241.0
+offset_top = -40.0
+offset_right = 281.0
+grow_vertical = 0
+text = "7"
+script = ExtResource("3_dsq8y")
+buttonNumber = 7
+boardController = NodePath("../../BoardController")
+
+[node name="Button8" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 281.0
+offset_top = -40.0
+offset_right = 321.0
+grow_vertical = 0
+text = "8"
+script = ExtResource("3_dsq8y")
+buttonNumber = 8
+boardController = NodePath("../../BoardController")
+
+[node name="Button9" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 321.0
+offset_top = -40.0
+offset_right = 361.0
+grow_vertical = 0
+text = "9"
+script = ExtResource("3_dsq8y")
+buttonNumber = 9
+boardController = NodePath("../../BoardController")
+
+[node name="SystemButton" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SystemButton"]
+
+[node name="Pause" type="Button" parent="SystemButton/CanvasLayer"]
+offset_left = 994.0
+offset_top = 616.0
+offset_right = 1049.0
+offset_bottom = 647.0
+text = "Pause"
+
+[node name="Restart" type="Button" parent="SystemButton/CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1070.0
+offset_top = -40.0
+offset_right = 1135.0
+offset_bottom = -9.0
+grow_vertical = 0
+scale = Vector2(1.425, 1.425)
+pivot_offset = Vector2(44.4075, 16.4851)
+text = "Restart"
+script = ExtResource("3_3jcud")
+boardController = NodePath("../../../BoardController")

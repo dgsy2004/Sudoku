@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "D:\\Godot",
+            "program": "D:\\Godot\\Godot.exe",
             "cwd":"${workspaceFolder}",
             "console": "internalConsole",
             "stopAtEntry": false,
@@ -17,3 +17,4 @@
         }
     ]
 }
+
